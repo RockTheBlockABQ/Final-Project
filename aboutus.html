@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Rock The Block</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 45%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .image-container-center {
+            display: flex;
+            justify-content: center; 
+            margin: 20px 0;
+        }
+
+        .image-container-center img {
+            width: 80%; 
+            max-width: 600px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .image-container img {
+                width: 100%;
+            }
+
+            .image-container-center img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rock The Block</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="ourmission.html">Our Mission</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="featuredartists.html">Featured Artists</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>About Us</h2>
+        <p>DoloMyte Sounds is dedicated to assisting up-and-coming artists of all forms to showcase their art. If you are a graffiti artist, breakdancing artist, or a 
+            musical artist, come visit us on 4th and Central in Albuquerque, New Mexico. Our free communal event allows for artists to create a following and share their
+            art with our community. DoloMyte Sounds consists of Michael Tafoya A.K.A Ekym1536 (host), Eric Tafoya A.K.A Dj E-Dub, and Hillery Tafoya (administrative assistant).
+            During the summer months, we work in partnership with The MotherShip Alumni Art Gallery to provide these services to not only the artists but to our local community.
+            This allows for the community to come together to support one another.
+        </p>
+        <div class="image-container">
+            <img src="images/ekym1536.jpg" alt="Profile Picture of Ekym1536">
+            <img src="images/djedub.jpg" alt="Profile Picture of Dj E-Dub">
+        </div>
+        <div class="image-container-center">
+            <img src="images/veniceradio.jpg" alt="Venice Radio">
+        </div>
+
+        <section>
+            <p>Check out our events, meet our featured artists, and don't forget to visit our gallery to see some amazing artwork! We look forward to seeing you all out there!</p>
+            <button onclick="location.href='events.html'">See Upcoming Events</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rock The Block. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+

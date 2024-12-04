@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Rock The Block</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .caption {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            max-height: 80%;
+            object-fit: contain; 
+        }
+
+        .modal-caption {
+            text-align: center;
+            color: white;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .centered-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .flex-row {
+            display: flex;
+            gap: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rock The Block</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="ourmission.html">Our Mission</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="featuredartists.html">Featured Artists</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Gallery</h2>
+        <p>Explore the creativity and talent of our local artists through the following images:</p>
+
+        <div class="gallery">
+
+            <div class="centered-images">
+                <div>
+                    <img src="images/myka9.jpg" alt="Myka at event" onclick="openModal(this)">
+                    <div class="caption">Myka9 - Image</div>
+                </div>
+                <div>
+                    <img src="images/rtbfounders.jpg" alt="Founders of Rock The Block" onclick="openModal(this)">
+                    <div class="caption">Founders of Rock The Block</div>
+                </div>
+            </div>
+
+            <div class="flex-row">
+                <div>
+                    <img src="images/rtb1.jpg" alt="Event Photo 1" onclick="openModal(this)">
+                    <div class="caption">RTB-Image 1</div>
+                </div>
+                <div>
+                    <img src="images/rtb6.jpg" alt="Event Photo 6" onclick="openModal(this)">
+                    <div class="caption">RTB-Image 6</div>
+                </div>
+            </div>
+
+            <div>
+                <img src="images/rtb2.jpg" alt="Event Photo 2" onclick="openModal(this)">
+                <div class="caption">RTB-Image 2</div>
+            </div>
+            <div>
+                <img src="images/rtb3.jpg" alt="Event Photo 3" onclick="openModal(this)">
+                <div class="caption">RTB-Image 3</div>
+            </div>
+            <div>
+                <img src="images/rtb4.jpg" alt="Event Photo 4" onclick="openModal(this)">
+                <div class="caption">RTB-Image 4</div>
+            </div>
+            <div>
+                <img src="images/rtb5.jpg" alt="Event Photo 5" onclick="openModal(this)">
+                <div class="caption">RTB-Image 5</div>
+            </div>
+        </div>
+    </main>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Rock The Block</p>
+        <p>
+            Follow us on:
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </p>
+    </footer>
+
+    <script>
+
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            var captionText = document.getElementById("modalCaption");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
