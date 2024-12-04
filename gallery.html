@@ -6,11 +6,23 @@
     <title>Gallery - Rock The Block</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+     
+        .video-container {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .video-container video {
+            width: 60%;
+            border: 5px solid rgb(8, 8, 8); 
+            border-radius: 10px; 
+        }
+
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 30px;
         }
 
         .gallery img {
@@ -48,7 +60,7 @@
             width: 80%;
             max-width: 700px;
             max-height: 80%;
-            object-fit: contain; 
+            object-fit: contain;
         }
 
         .modal-caption {
@@ -56,6 +68,9 @@
             color: white;
             font-size: 1.1em;
             margin-top: 10px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-weight: bold;
         }
 
         .close {
@@ -105,48 +120,45 @@
     </header>
 
     <main>
-        <h2>Gallery</h2>
-        <p>Explore the creativity and talent of our local artists through the following images:</p>
+        <div class="video-container">
+            <video controls>
+                <source src="rtbbusvid.mp4" type="video/mp4">
+            </video>
+        </div>
 
+        <h2>Rock The Block Gallery</h2>
         <div class="gallery">
-
             <div class="centered-images">
                 <div>
-                    <img src="images/myka9.jpg" alt="Myka at event" onclick="openModal(this)">
-                    <div class="caption">Myka9 - Image</div>
+                    <img src="images/myka9.jpg" alt="Myka9 performing at an event" title="Myka9 at an event" onclick="openModal(this)">
                 </div>
                 <div>
-                    <img src="images/rtbfounders.jpg" alt="Founders of Rock The Block" onclick="openModal(this)">
-                    <div class="caption">Founders of Rock The Block</div>
+                    <img src="images/rtbfounders.jpg" alt="Founders of Rock The Block" title="Founders of Rock The Block" onclick="openModal(this)">
                 </div>
             </div>
-
             <div class="flex-row">
                 <div>
-                    <img src="images/rtb1.jpg" alt="Event Photo 1" onclick="openModal(this)">
-                    <div class="caption">RTB-Image 1</div>
+                    <img src="images/rtb1.jpg" alt="Event Photo 1" title="Rock The Block Event Photo 1" onclick="openModal(this)">
                 </div>
                 <div>
-                    <img src="images/rtb6.jpg" alt="Event Photo 6" onclick="openModal(this)">
-                    <div class="caption">RTB-Image 6</div>
+                    <img src="images/rtb6.jpg" alt="Event Photo 6" title="Rock The Block Event Photo 6" onclick="openModal(this)">
                 </div>
             </div>
-
-            <div>
-                <img src="images/rtb2.jpg" alt="Event Photo 2" onclick="openModal(this)">
-                <div class="caption">RTB-Image 2</div>
+            <div class="flex-row">
+                <div>
+                    <img src="images/rtb2.jpg" alt="Event Photo 2" title="Rock The Block Event Photo 2" onclick="openModal(this)">
+                </div>
+                <div>
+                    <img src="images/rtb3.jpg" alt="Event Photo 3" title="Rock The Block Event Photo 3" onclick="openModal(this)">
+                </div>
             </div>
-            <div>
-                <img src="images/rtb3.jpg" alt="Event Photo 3" onclick="openModal(this)">
-                <div class="caption">RTB-Image 3</div>
-            </div>
-            <div>
-                <img src="images/rtb4.jpg" alt="Event Photo 4" onclick="openModal(this)">
-                <div class="caption">RTB-Image 4</div>
-            </div>
-            <div>
-                <img src="images/rtb5.jpg" alt="Event Photo 5" onclick="openModal(this)">
-                <div class="caption">RTB-Image 5</div>
+            <div class="flex-row">
+                <div>
+                    <img src="images/rtb4.jpg" alt="Event Photo 4" title="Rock The Block Event Photo 4" onclick="openModal(this)">
+                </div>
+                <div>
+                    <img src="images/rtb5.jpg" alt="Event Photo 5" title="Rock The Block Event Photo 5" onclick="openModal(this)">
+                </div>
             </div>
         </div>
     </main>
@@ -161,14 +173,12 @@
         <p>&copy; 2024 Rock The Block</p>
         <p>
             Follow us on:
-            <a href="https://facebook.com" target="_blank">Facebook</a> |
-            <a href="https://twitter.com" target="_blank">Twitter</a> |
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/ekym1536/" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/rocktheblock_dms/?locale=en_US&hl=am-et" target="_blank">Instagram</a>
         </p>
     </footer>
 
     <script>
-
         function openModal(img) {
             var modal = document.getElementById("myModal");
             var modalImg = document.getElementById("modalImage");
@@ -192,8 +202,6 @@
     </script>
 </body>
 </html>
-
-
 
 
 

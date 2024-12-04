@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Rock The Block for any inquiries or to get involved with our community events.">
+    <meta name="keywords" content="contact, rock the block, community, artists, non-profit">
+    <meta name="author" content="Rock The Block">
     <title>Contact Us - Rock The Block</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -40,6 +43,12 @@
         button:hover {
             background-color: #0056b3;
         }
+        .contact-logo {
+            display: block;
+            max-width: 300px; 
+            margin: 0 auto 20px; 
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -57,36 +66,40 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <h2>Contact Us</h2>
-        <p>For any questions, comments, or to get involved, please fill out the form below. We look forward to hearing from you!:</p>
+        <p>For any questions, comments, or to get involved, please fill out the form below. We look forward to hearing from you!</p>
+        <img src="dmslogo.png" alt="DoloMyte Sounds Logo" class="contact-logo">
+
         <form action="YOUR_SERVER_ENDPOINT" method="POST">
             <div>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required aria-label="Your Name">
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required aria-label="Your Email">
             </div>
             <div>
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required aria-label="Your Message"></textarea>
             </div>
             <div>
                 <button type="submit">Send Message</button>
             </div>
         </form>
     </main>
+
     <footer>
         <p>&copy; 2024 Rock The Block</p>
         <p>
             Follow us on:
-            <a href="https://facebook.com" target="_blank">Facebook</a> |
-            <a href="https://twitter.com" target="_blank">Twitter</a> |
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/ekym1536/" target="_blank" aria-label="Visit our Facebook page">Facebook</a> |
+            <a href="https://www.instagram.com/rocktheblock_dms/?locale=en_US&hl=am-et" target="_blank" aria-label="Visit our Instagram page">Instagram</a>
         </p>
     </footer>
 </body>
 </html>
+
 
